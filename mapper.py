@@ -19,8 +19,23 @@ def venteMapper(question_number):
         # Return the Result tupls
         print((mapperKey,profit))
 
-#Q1
-venteMapper(int(question_number)-1)
+def venteSoldMapper(question_number):
+    for line in file:
+        # Split words by ,
+        words = line.split(",")
+        # Get Type,Sales Channel and Units Sold
+        mapperKey = words[2]
+        salesChannwl = words[3].replace('\n','')
+        unitsSold = words[8].replace('\n','')
+        print ((mapperKey,(salesChannwl,unitsSold)))
+
+if int(question_number) == 4 :
+    # Question 4
+    venteSoldMapper(int(question_number))
+else:
+    #Question 1,2,3
+    venteMapper(int(question_number)-1)
+
 
 
 
