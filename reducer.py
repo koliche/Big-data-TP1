@@ -2,8 +2,6 @@
 import sys
 
 test = dict()
-
-
 for line in sys.stdin:
     if line.count("(")==1:
         # Get the region name and the profit
@@ -22,7 +20,6 @@ for line in sys.stdin:
             test[(type_item_name,salesChannel)] = float(test[(type_item_name,salesChannel)]) + float(unitsSold)
         else:
             test[(type_item_name,salesChannel)] = float(unitsSold)
-
 print(test)
 
 
