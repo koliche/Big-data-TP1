@@ -4,7 +4,7 @@
 ### => Obtain the total profit obtained by country.
 ### => Get the total profit obtained by item type.
 ### => For each type of item, obtain two values:
-      . The amount of online sales.
-      . The amount of offline sales.
-        … and for each of them, the corresponding total profit obtained
+      - The amount of online sales.
+      - The amount of offline sales.
+        and for each of them, the corresponding total profit obtained
    
