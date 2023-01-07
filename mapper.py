@@ -1,23 +1,26 @@
 import sys
+import argparse
+# Create the Question number parameter :
+parser = argparse.ArgumentParser()
+parser.add_argument('--question_number', help='the number of the question to be displayed')
+args = parser.parse_args()
+
+question_number = args.question_number
 # Skip the Header of csv :
 file = sys.stdin
 next(file)
-def venteMapper(key_index):
+def venteMapper(question_number):
     for line in file:
         # Split words by
         words = line.split(",")
         # Get region and profit
-        mapperKey = words[key_index]
+        mapperKey = words[question_number]
         profit = words[-1].replace('\n','')
         # Return the Result tupls
         print((mapperKey,profit))
 
 #Q1
-venteMapper(0)
-#Q2
-#venteMapper(1)
-#Q3
-#venteMapper(2)
+venteMapper(int(question_number)-1)
 
 
 
