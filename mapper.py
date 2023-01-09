@@ -1,5 +1,7 @@
 import sys
 import argparse
+# Input Key: Line Number
+# Input Value: Line Content
 # Create the Question number parameter :
 parser = argparse.ArgumentParser()
 parser.add_argument('--question_number', help='the number of the question to be displayed')
@@ -10,6 +12,8 @@ question_number = args.question_number
 file = sys.stdin
 next(file)
 def venteMapper(question_number):
+    # Output Key: mapperKey= "region name" or "country name" or "type"
+    # Output Value: the profit
     for line in file:
         # Split words by
         words = line.split(",")
@@ -20,6 +24,8 @@ def venteMapper(question_number):
         print((mapperKey,profit))
 
 def venteSoldMapper(question_number):
+    # Output Key: the type
+    # Output Value: the sales Channel and unitsSold
     for line in file:
         # Split words by ,
         words = line.split(",")
